@@ -1,0 +1,35 @@
+.not-found-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.not-found-heading {
+  font-family: DM Sans;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 48px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+.not-found-desc {
+  font-family: DM Sans;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+.home-page-button {
+  width: Hug (123px);
+  height: Hug (48px);
+  padding: 12px 24px 12px 24px;
+  border-radius: 12px;
+  gap: 8px;
+  background-color: #f0a613;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}

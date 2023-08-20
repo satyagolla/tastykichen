@@ -1,0 +1,142 @@
+.no-orders-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 50px;
+  margin-bottom: 250px;
+}
+.no-orders-image {
+  width: 200px;
+}
+
+.no-orders-heading {
+  font-family: DM Sans;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 32px;
+  letter-spacing: 0px;
+  text-align: center;
+  color: #1e293b;
+}
+.no-orders-desc {
+  font-family: DM Sans;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: center;
+}
+.order-now-button {
+  width: Hug (93px);
+  height: Hug (32px);
+  padding: 8px 16px 8px 16px;
+  border-radius: 8px;
+  gap: 8px;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  background: #f7931e;
+  font-weight: 500;
+  font-family: 'DM Sans';
+}
+.cart-items-list {
+  list-style-type: none;
+  padding: 20px;
+}
+.cart-line {
+  border: none; /* Remove default border */
+  border-top: 1px dotted black; /* Add dotted border on top */
+  margin: 20px 0; /* Adjust spacing around the line */
+}
+.order-card {
+  display: flex;
+  justify-content: space-between;
+}
+.add-items-list {
+  background-color: #f2feff;
+}
+
+.complete-cart-container {
+  margin: 25px;
+}
+.place-order-button {
+  width: Hug (99px);
+  height: Hug (32px);
+  padding: 8px 16px 8px 16px;
+  border-radius: 8px;
+  gap: 8px;
+  background: #f7931e;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  color: #ffffff;
+  align-self: flex-end;
+}
+.total-bill-card {
+  display: flex;
+  flex-direction: column;
+}
+.cart-list-order {
+  display: none;
+}
+.total-bill-card {
+  padding: 20px;
+}
+.order {
+  font-size: 18px;
+  font-weight: 600;
+  padding-top: 0px;
+  margin-top: 0px;
+  display: flex;
+  align-items: center;
+}
+.payment-cart {
+  display: flex;
+  flex-direction: column;
+  margin: 25px;
+  align-items: center;
+  text-align: center;
+  margin-top: 100px;
+}
+.go-to-home-button {
+  width: Hug (99px);
+  height: Hug (32px);
+  padding: 8px 16px 8px 16px;
+  border-radius: 8px;
+  gap: 8px;
+  background: #f7931e;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  color: #ffffff;
+}
+@media screen and (min-width: 768px) {
+  .complete-cart-container {
+    margin: 100px;
+    margin-top: 50px;
+    padding: 50px;
+  }
+
+  .cart-list-order {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .items-price {
+    font-size: 24px;
+  }
+  .items-price-quantity {
+    font-size: 24px;
+    margin-left: 30px;
+  }
+  .no-orders-container {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  .no-orders-image {
+    width: 300px;
+  }
+}

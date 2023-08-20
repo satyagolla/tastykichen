@@ -1,0 +1,91 @@
+@media screen and (min-width: 768px) {
+  .search-and-select-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.search-card {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  border: 1px solid #c4cbcf;
+  padding-left: 5px;
+  width: 300px;
+  height: 30px;
+  border-radius: 4px;
+}
+.select-card {
+  display: flex;
+  align-items: center;
+}
+.input-search {
+  border: none;
+  width: 90%;
+  outline: none;
+  font-family: 'DM search';
+}
+.search-button {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+.select {
+  border: none;
+  font-weight: 500;
+  font-family: 'DM sans';
+  font-size: 20px;
+  color: #627682;
+  margin-left: 5px;
+  outline: none;
+}
+.filter-icon {
+  font-size: 24px;
+  color: #627682;
+}
+.filter-label {
+  font-size: 20px;
+  margin-left: 10px;
+  color: #627682;
+}
+.loader-container {
+  margin-top: 30px;
+  margin-bottom: 35px;
+  display: flex;
+  justify-content: center;
+}
+@media screen and (min-width: 786px) {
+  .loader-container {
+    margin-top: 100px;
+  }
+}
+
+.next-previous-buttons-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.next-button {
+  background-color: transparent;
+  height: 30px;
+}
+.page-number {
+  font-family: 'DM sans';
+  font-weight: 600;
+  font-size: 24px;
+  color: #1e3b4a;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.restaurants-container {
+  list-style-type: none;
+  padding-left: 0px;
+}
+@media screen and (min-width: 768px) {
+  .restaurants-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+}

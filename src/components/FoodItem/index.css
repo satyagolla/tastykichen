@@ -1,0 +1,72 @@
+.image-item {
+  width: 180px;
+  height: 130px;
+  border-radius: 6px;
+}
+.food-list-item {
+  display: flex;
+  align-items: center;
+  margin: 20px;
+}
+.food-desc-card {
+  margin-left: 20px;
+  margin-top: 5px;
+  padding-top: 0px;
+}
+.cost {
+  display: flex;
+  align-items: center;
+  font-family: 'DM Sans';
+  font-weight: 500;
+  color: #4b5b75;
+  font-size: 16px;
+  margin-bottom: 1px;
+  padding-bottom: 0px;
+  margin-top: 0px;
+  padding-top: 0px;
+}
+.food-rating {
+  display: flex;
+  align-items: center;
+  font-family: 'DM Sans';
+  font-weight: 500;
+  color: #4b5b75;
+  font-size: 14px;
+  margin-top: 1px;
+  padding-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  padding-left: 0px;
+}
+.item-name {
+  font-size: 16px;
+  margin-top: 0px;
+  padding-top: 0px;
+  color: #192840;
+  font-weight: 500;
+  font-family: 'DM Sans';
+}
+.add-button {
+  margin-top: 0px;
+  background-color: #fc8f21;
+  width: 45px;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  font-weight: 400;
+  font-family: 'DM Sans';
+  border-radius: 4px;
+  padding: 3px;
+  cursor: pointer;
+}
+.food-star {
+  padding-left: 0px;
+  margin-left: 0px;
+  color: #fcdb35;
+  margin-right: 5px;
+}
+@media screen and (min-width: 768px) {
+  .food-list-item {
+    width: 350px;
+  }
+}
