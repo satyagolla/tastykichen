@@ -37,56 +37,54 @@ class CartList extends Component {
     </div>
   )
 
-  getCartListItems = cartList => {
-    let totalBill = 0
-    cartList.forEach(each => {
-      totalBill += each.cost * each.quantity
-    })
+  getCartListItems = () => (
+    <ReactContext.Consumer>
+      {value => {
+        const {cartData, paymentSuccessful} = value
 
-    return (
-      <ReactContext.Consumer>
-        {value => {
-          const {paymentSuccessful} = value
+        let totalBill = 0
+        cartData.forEach(each => {
+          totalBill += each.cost * each.quantity
+        })
 
-          const updatePlaceOrder = () => {
-            paymentSuccessful()
-            this.setState({orderPlaced: true})
-          }
-          return (
-            <div className="add-items-list">
-              <div className="cart-list-order">
-                <p className="items-price">Items</p>
-                <p className="items-price-quantity">Quantity</p>
-                <p className="items-price">Price</p>
-              </div>
-              <ul className="cart-items-list">
-                {cartList.map(each => (
-                  <CartItem key={each.id} item={each} />
-                ))}
-              </ul>
-              <hr className="cart-line" />
-              <div className="total-bill-card">
-                <div className="order-card">
-                  <p className="order">Order:</p>
-                  <p className="order" testid="total-price">
-                    <BiRupee />
-                    {totalBill}
-                  </p>
-                </div>
-                <button
-                  className="place-order-button"
-                  type="button"
-                  onClick={updatePlaceOrder}
-                >
-                  Place Order
-                </button>
-              </div>
+        const updatePlaceOrder = () => {
+          paymentSuccessful()
+          this.setState({orderPlaced: true})
+        }
+        return (
+          <div className="add-items-list">
+            <div className="cart-list-order">
+              <p className="items-price">Items</p>
+              <p className="items-price-quantity">Quantity</p>
+              <p className="items-price">Price</p>
             </div>
-          )
-        }}
-      </ReactContext.Consumer>
-    )
-  }
+            <ul className="cart-items-list">
+              {cartData.map(each => (
+                <CartItem key={each.id} item={each} />
+              ))}
+            </ul>
+            <hr className="cart-line" />
+            <div className="total-bill-card">
+              <div className="order-card">
+                <p className="order">Order:</p>
+                <p className="order">
+                  <BiRupee />
+                  <span>{totalBill}</span>
+                </p>
+              </div>
+              <button
+                className="place-order-button"
+                type="button"
+                onClick={updatePlaceOrder}
+              >
+                Place Order
+              </button>
+            </div>
+          </div>
+        )
+      }}
+    </ReactContext.Consumer>
+  )
 
   cartView = () => (
     <ReactContext.Consumer>
@@ -98,7 +96,7 @@ class CartList extends Component {
           <div>
             <Navbar />
             <div className="complete-cart-container">
-              {noItems ? this.getCartListItems(cartData) : this.noOrdersView()}
+              {noItems ? this.getCartListItems() : this.noOrdersView()}
             </div>
             <Footer />
           </div>

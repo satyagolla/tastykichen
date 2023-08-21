@@ -39,7 +39,6 @@ class RestaurantDetails extends Component {
     const response = await fetch(url, options)
     const data = await response.json()
     if (response.ok === true) {
-      console.log(data)
       const details = {
         costForTwo: data.cost_for_two,
         cuisine: data.cuisine,
@@ -69,10 +68,7 @@ class RestaurantDetails extends Component {
   }
 
   getLoader = () => (
-    <div
-      className="restaurant-loader-container"
-      data-testid="restaurant-details-loader"
-    >
+    <div className="restaurant-loader-container">
       <Loader type="Oval" color="#fa9119" height={50} width={50} />
     </div>
   )
@@ -123,7 +119,7 @@ class RestaurantDetails extends Component {
     const {restaurantDetails} = this.state
 
     const itemsList = restaurantDetails.foodItems
-    console.log(itemsList, 'hello')
+
     return (
       <ul className="Food-list-item">
         {itemsList.map(each => (

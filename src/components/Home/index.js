@@ -162,13 +162,13 @@ class Home extends Component {
   }
 
   getLoader = () => (
-    <div className="loader-container" testid="restaurants-offers-loader">
+    <div className="loader-container">
       <Loader type="Oval" color="#fa9119" height={50} width={50} />
     </div>
   )
 
   getListLoader = () => (
-    <div className="loader-container" testid="restaurants-list-loader">
+    <div className="loader-container">
       <Loader type="Oval" color="#fa9119" height={50} width={50} />
     </div>
   )
@@ -197,6 +197,18 @@ class Home extends Component {
     )
   }
 
+  getSuccessView = () => {
+    const {itemsList} = this.state
+
+    return (
+      <ul className="restaurants-container">
+        {itemsList.map(each => (
+          <RestaurantItem key={each.id} restaurantDetails={each} />
+        ))}
+      </ul>
+    )
+  }
+
   getItems = () => {
     const {apiStatusItems} = this.state
     switch (apiStatusItems) {
@@ -221,18 +233,6 @@ class Home extends Component {
       default:
         return null
     }
-  }
-
-  getSuccessView = () => {
-    const {itemsList} = this.state
-
-    return (
-      <ul className="restaurants-container">
-        {itemsList.map(each => (
-          <RestaurantItem key={each.id} restaurantDetails={each} />
-        ))}
-      </ul>
-    )
   }
 
   render() {
@@ -292,19 +292,17 @@ class Home extends Component {
               className="next-button"
               type="button"
               onClick={this.previousPage}
-              testid="pagination-left-button"
             >
               <GrPrevious />
             </button>
-            <span testid="active-page-number" className="page-number">
-              {pageNo} of {lastPage}
-            </span>
+            <p className="page-number">
+              <span>{pageNo}</span> of {lastPage}
+            </p>
 
             <button
               className="next-button"
               type="button"
               onClick={this.nextPage}
-              testid="pagination-right-button"
             >
               <GrNext />
             </button>

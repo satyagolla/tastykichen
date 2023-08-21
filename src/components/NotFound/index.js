@@ -3,8 +3,6 @@ import {withRouter} from 'react-router-dom'
 import './index.css'
 
 const NotFound = props => {
-  console.log('jsdflk')
-
   const redirectToHomePage = () => {
     const {history} = props
     history.replace('/')

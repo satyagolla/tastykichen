@@ -14,7 +14,7 @@ export default function Footer() {
       <div className="title-card">
         <img
           src="https://ik.imagekit.io/k57gckxqm/Tasty%20Kitchen%20Project/Frame%20275.png?updatedAt=1692162574648"
-          alt="website logo"
+          alt="website-footer-logo"
           className="website-footer-logo"
         />
         <h1 className="footer-heading">Tasty Kitchen</h1>

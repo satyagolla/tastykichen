@@ -2,15 +2,6 @@ import {Component} from 'react'
 import Cookies from 'js-cookie'
 import {Redirect} from 'react-router-dom'
 
-import {
-  InputCard,
-  Label,
-  Input,
-  LoginButton,
-  From,
-  ErrorMsg,
-  FormContainer,
-} from './styledComponent'
 import './index.css'
 
 class LoginRoute extends Component {
@@ -56,85 +47,74 @@ class LoginRoute extends Component {
 
   render() {
     const {errorMsg} = this.state
+    console.log('login')
     const jwtToken = Cookies.get('jwt_token')
     if (jwtToken !== undefined) {
       return <Redirect to="/" />
     }
     return (
-      <>
-        <div className="login-container-for-small-device">
-          <div className="image-heading-card">
-            <h1 className="login-heading">Login</h1>
-            <img
-              src="https://ik.imagekit.io/k57gckxqm/Tasty%20Kitchen%20Project/Rectangle%201457.png?updatedAt=1692167752080"
-              alt="website login"
-              className="image"
-            />
-          </div>
-          <From onSubmit={this.submitUsernameAndPassword}>
-            <InputCard>
-              <Label htmlFor="username">USERNAME</Label>
-              <Input type="text" id="username" onChange={this.updateUsername} />
-            </InputCard>
-            <InputCard>
-              <Label htmlFor="password">PASSWORD</Label>
-              <Input
-                type="password"
-                id="password"
-                onChange={this.updatePassword}
+      <div className="login-container">
+        <div className="login-card">
+          <div className="login-form-card">
+            <div className="large-device-heading-image-card">
+              <img
+                src="https://ik.imagekit.io/k57gckxqm/Tasty%20Kitchen%20Project/Frame%20274.png?updatedAt=1692162574618"
+                alt="website logo"
+                className="website-logo"
               />
-            </InputCard>
-            {errorMsg === '' ? '' : <ErrorMsg>{errorMsg}</ErrorMsg>}
-            <LoginButton type="submit" onClick={this.submitUsernameAndPassword}>
-              Login
-            </LoginButton>
-          </From>
-        </div>
-        <div className="login-container-for-large-device">
-          <FormContainer>
-            <From onSubmit={this.submitUsernameAndPassword}>
-              <div className="image-heading-title-card">
-                <img
-                  src="https://ik.imagekit.io/k57gckxqm/Tasty%20Kitchen%20Project/Frame%20274.png?updatedAt=1692162574618"
-                  alt="project icon"
-                  className="website logo"
-                />
-
-                <p className="tasty-name">Tasty kitchens</p>
-                <h1 className="login-heading">Login</h1>
-              </div>
-              <InputCard>
-                <Label htmlFor="username">USERNAME</Label>
-                <Input
+              <p className="tasty-kitchen">Tasty Kitchen</p>
+              <h1 className="login-heading">Login</h1>
+            </div>
+            <div className="small-device-heading-image-card">
+              <h1 className="login-heading">Login</h1>
+              <img
+                src="https://ik.imagekit.io/k57gckxqm/Tasty%20Kitchen%20Project/Rectangle%201457.png?updatedAt=1692167752080"
+                alt="website login"
+              />
+            </div>
+            <form
+              className="form-card"
+              onSubmit={this.submitUsernameAndPassword}
+            >
+              <div className="input-card">
+                <label htmlFor="username" className="label">
+                  USERNAME
+                </label>
+                <input
                   type="text"
                   id="username"
+                  className="input"
                   onChange={this.updateUsername}
                 />
-              </InputCard>
-              <InputCard>
-                <Label htmlFor="password">PASSWORD</Label>
-                <Input
+              </div>
+              <div className="input-card">
+                <label htmlFor="password" className="label">
+                  PASSWORD
+                </label>
+                <input
                   type="password"
                   id="password"
+                  className="input"
                   onChange={this.updatePassword}
                 />
-              </InputCard>
-              {errorMsg === '' ? '' : <ErrorMsg>{errorMsg}</ErrorMsg>}
-              <LoginButton
+              </div>
+              <p className="error-msg">{errorMsg}</p>
+              <button
+                className="login-button"
                 type="submit"
                 onClick={this.submitUsernameAndPassword}
               >
                 Login
-              </LoginButton>
-            </From>
-          </FormContainer>
-          <img
-            src="https://ik.imagekit.io/k57gckxqm/Tasty%20Kitchen%20Project/Rectangle%201456.png?updatedAt=1692162576781"
-            alt="rect"
-            className="website login"
-          />
+              </button>
+            </form>
+          </div>
         </div>
-      </>
+        <img
+          src="https://ik.imagekit.io/k57gckxqm/Tasty%20Kitchen%20Project/Rectangle%201456.png?updatedAt=1692162576781"
+          className="large-image"
+          alt="website login"
+        />
+      </div>
     )
   }
 }

@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const HomeContainer = styled.div`
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 786px) {
     padding-left: 100px;
     padding-right: 100px;
     padding-top: 50px;
@@ -11,7 +11,7 @@ export const HomeContainer = styled.div`
 export const Image = styled.img`
   width: 100%;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 786px) {
     height: 350px;
   }
 `

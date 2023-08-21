@@ -15,7 +15,7 @@ export const Title = styled.p`
   font-family: 'DM sans';
   margin-left: 10px;
   font-weight: 500;
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 786px) {
     font-size: 24px;
   }
 `
@@ -41,12 +41,7 @@ export const ListItemCard = styled.ul`
   display: flex;
   align-items: center;
 `
-export const Item = styled.li`
-  margin-left: 20px;
-  color: ${props => (props.textColor ? '#ff951c' : '#183b56')};
-  font-weight: 500;
-  font-family: 'DM sans';
-`
+
 export const LogOut = styled.button`
   background-color: #ff951c;
   color: #ffffff;

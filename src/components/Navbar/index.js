@@ -11,7 +11,6 @@ import {
   Menu,
   MenuCard,
   ListItemCard,
-  Item,
   LogOut,
   Cancel,
 } from './styledComponent'
@@ -40,8 +39,9 @@ class Navbar extends Component {
     const {match} = this.props
     const currentPath = match.path
 
-    const home = currentPath === '/' || currentPath !== '/cart'
-    const cart = currentPath === '/cart'
+    const home =
+      currentPath === '/' || currentPath !== '/cart' ? 'list-color' : ''
+    const cart = currentPath === '/cart' ? 'list-color' : ''
 
     return (
       <>
@@ -61,22 +61,24 @@ class Navbar extends Component {
           </Menu>
         </nav>
         {isTrue ? (
-          <MenuCard>
-            <ListItemCard>
-              <Link to="/" className="link">
-                <Item textColor={home}>Home</Item>
-              </Link>
-              <Link to="/cart" className="link">
-                <Item textColor={cart}>Cart</Item>
-              </Link>
-              <Item>
-                <LogOut onClick={this.logout}>Logout</LogOut>
-              </Item>
-            </ListItemCard>
-            <Cancel onClick={this.hideMenu}>
-              <MdCancel />
-            </Cancel>
-          </MenuCard>
+          <div className="menu-card-small-device">
+            <MenuCard>
+              <ListItemCard>
+                <Link to="/" className="link">
+                  <li className={`li-element ${home}`}>Home</li>
+                </Link>
+                <Link to="/cart" className="link">
+                  <li className={`li-element ${cart}`}>Cart</li>
+                </Link>
+                <li className="li-element">
+                  <LogOut onClick={this.logout}>Logout</LogOut>
+                </li>
+              </ListItemCard>
+              <Cancel onClick={this.hideMenu}>
+                <MdCancel />
+              </Cancel>
+            </MenuCard>
+          </div>
         ) : (
           ''
         )}
@@ -94,14 +96,14 @@ class Navbar extends Component {
             <MenuCard>
               <ListItemCard>
                 <Link to="/" className="link">
-                  <Item textColor={home}>Home</Item>
+                  <li className={`li-element ${home}`}>Home</li>
                 </Link>
                 <Link to="/cart" className="link">
-                  <Item textColor={cart}>Cart</Item>
+                  <li className={`li-element ${cart}`}>Cart</li>
                 </Link>
-                <Item>
+                <li className="li-element">
                   <LogOut onClick={this.logout}>Logout</LogOut>
-                </Item>
+                </li>
               </ListItemCard>
             </MenuCard>
           </div>

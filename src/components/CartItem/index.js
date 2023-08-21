@@ -1,5 +1,5 @@
 import {BiRupee} from 'react-icons/bi'
-import Counter from '../Counter'
+import CartCount from '../CartCount'
 import './index.css'
 
 const CartItem = props => {
@@ -7,13 +7,13 @@ const CartItem = props => {
   const {imageUrl, id, name, cost} = item
 
   return (
-    <li className="cart-item-container" testid="cartItem">
+    <li className="cart-item-container">
       <img src={imageUrl} alt="foodItem" className="cart-image" />
       <div className="cart-item-desc-card">
         <h1 className="cart-item-heading">{name}</h1>
 
         <div className="counter">
-          <Counter itemId={id} />
+          <CartCount itemId={id} />
         </div>
 
         <p className="cart-item-desc">

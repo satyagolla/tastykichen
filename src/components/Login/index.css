@@ -1,60 +1,111 @@
-.image-heading-card {
+.small-device-heading-image-card {
   display: flex;
+  justify-content: space-between;
   width: 100%;
-  height: 50vh;
-}
-.image {
-  height: 100%;
 }
 .login-heading {
   align-self: flex-end;
   padding-left: 20px;
-}
-@media screen and (min-width: 768px) {
-  .login-heading {
-    align-self: center;
-    padding-left: 0px;
-  }
-}
-.login-heading {
-  font-family: 'DM sans';
+  font-family: DM Sans;
+  font-size: 26px;
   font-weight: 500;
-  font-size: 25px;
   line-height: 32px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #0f172a;
 }
-.login-container-for-small-device {
-  height: 100vh;
+.input-card {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
 }
-
-@media screen and (min-width: 786px) {
-  .login-container-for-small-device {
-    display: none;
-  }
+.form-card {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 50px;
+  width: 100%;
 }
-
-.login-container-for-large-device {
+.label {
+  font-family: 'DM Sans';
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0.01em;
+  text-align: left;
+  color: #475569;
+  margin-bottom: 3px;
+}
+.input {
+  top: 24px;
+  border-radius: 2px;
+  background-color: #e2e8f0;
+  border: none;
+  outline: none;
+  font-size: 24px;
+  padding-left: 15px;
+}
+.login-button {
+  height: 40px;
+  width: 100%;
+  top: 552px;
+  left: 24px;
+  color: #ffffff;
+  background-color: #f5a505;
+  border: none;
+  outline: none;
+  border-radius: 3px;
+}
+.large-device-heading-image-card {
   display: none;
 }
-@media screen and (min-width: 789px) {
-  .login-container-for-large-device {
+.login-card {
+  width: 100%;
+}
+
+.large-image {
+  display: none;
+}
+@media screen and (min-width: 786px) {
+  .small-device-heading-image-card {
+    display: none;
+  }
+  .large-device-heading-image-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .login-container {
     display: flex;
     height: 100vh;
   }
+  .login-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+  }
   .large-image {
+    display: block;
     width: 40%;
   }
-}
-.project-icon {
-  width: 50px;
-}
-.tasty-name {
-  color: #ff951c;
-  margin-top: 0px;
-  font-size: 22px;
-  font-weight: 500;
-}
-.image-heading-title-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  .login-form-card {
+    padding: 20px;
+    box-shadow: 1px 1px 5px -1px;
+    border-radius: 4px;
+    padding-bottom: 30px;
+  }
+  .tasty-kitchen {
+    color: #f5a505;
+    font-size: 24px;
+    font-weight: 500;
+    font-family: 'DM Sans';
+    margin-bottom: 0px;
+    padding-top: 0px;
+    margin-top: 0px;
+  }
+  .login-heading {
+    align-self: center;
+  }
 }

@@ -10,8 +10,10 @@ import Cart from './components/Cart'
 import NotFound from './components/NotFound'
 import './App.css'
 
+const list = JSON.parse(localStorage.getItem('cartData'))
+
 class App extends Component {
-  state = {cartData: []}
+  state = {cartData: [...list]}
 
   addToCartList = item => {
     this.setState(prev => ({cartData: [...prev.cartData, item]}))
@@ -56,6 +58,7 @@ class App extends Component {
 
   render() {
     const {cartData} = this.state
+    localStorage.setItem('cartData', JSON.stringify(cartData))
 
     return (
       <ReactContext.Provider

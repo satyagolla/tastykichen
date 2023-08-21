@@ -3,7 +3,7 @@
   height: 150px;
   border-radius: 16px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 786px) {
   .items-image {
     width: 160px;
     height: 110px;
@@ -32,7 +32,7 @@
   color: #334155;
   margin-bottom: 0px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 786px) {
   .restaurant-name {
     font-size: 14px;
   }
@@ -49,7 +49,7 @@
   margin-top: 0px;
   margin-bottom: 0px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 786px) {
   .cuisine-name {
     font-size: 14px;
   }
@@ -73,7 +73,7 @@
   font-weight: 500;
   color: #64748b;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 786px) {
   .rating {
     font-size: 12px;
   }
