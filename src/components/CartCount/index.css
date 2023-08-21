@@ -1,0 +1,9 @@
+.increment-decrement-button {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+}
+.counter-button {
+  margin-left: 5px;
+  margin-right: 5px;
+}
