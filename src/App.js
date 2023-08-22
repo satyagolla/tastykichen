@@ -10,10 +10,14 @@ import Cart from './components/Cart'
 import NotFound from './components/NotFound'
 import './App.css'
 
-const list = JSON.parse(localStorage.getItem('cartData'))
+let list = JSON.parse(localStorage.getItem('cartData'))
+
+if (list === null) {
+  list = []
+}
 
 class App extends Component {
-  state = {cartData: [...list]}
+  state = {cartData: list}
 
   addToCartList = item => {
     this.setState(prev => ({cartData: [...prev.cartData, item]}))

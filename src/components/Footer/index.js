@@ -24,22 +24,16 @@ export default function Footer() {
       </p>
       <div className="logo-container">
         <Anchor href="https://in.pinterest.com/" target="_blank">
-          <FaPinterestSquare
-            className="logo-icon"
-            testid="pinterest-social-icon"
-          />
+          <FaPinterestSquare className="logo-icon" />
         </Anchor>
         <Anchor href="https://www.instagram.com/" target="_blank">
-          <FaInstagram className="logo-icon" testid="instagram-social-icon" />
+          <FaInstagram className="logo-icon" />
         </Anchor>
         <Anchor href="https://twitter.com/" target="_blank">
-          <FaTwitter className="logo-icon" testid="twitter-social-icon" />
+          <FaTwitter className="logo-icon" />
         </Anchor>
         <Anchor href="https://www.facebook.com/" target="_blank">
-          <FaFacebookSquare
-            className="logo-icon"
-            testid="facebook-social-icon"
-          />
+          <FaFacebookSquare className="logo-icon" />
         </Anchor>
       </div>
     </div>

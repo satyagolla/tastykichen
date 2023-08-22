@@ -198,16 +198,43 @@ class Home extends Component {
   }
 
   getSuccessView = () => {
-    const {itemsList} = this.state
+    const {itemsList, pageNo, lastPage} = this.state
 
     return (
-      <ul className="restaurants-container">
-        {itemsList.map(each => (
-          <RestaurantItem key={each.id} restaurantDetails={each} />
-        ))}
-      </ul>
+      <>
+        <ul className="restaurants-container">
+          {itemsList.map(each => (
+            <RestaurantItem key={each.id} restaurantDetails={each} />
+          ))}
+        </ul>
+        <div className="next-previous-buttons-card">
+          <button
+            className="next-button"
+            type="button"
+            onClick={this.previousPage}
+          >
+            <GrPrevious />
+          </button>
+          <p className="page-number">
+            <span>{pageNo}</span> of {lastPage}
+          </p>
+
+          <button className="next-button" type="button" onClick={this.nextPage}>
+            <GrNext />
+          </button>
+        </div>
+      </>
     )
   }
+
+  failureView = () => (
+    <div className="no-items-found-card">
+      <h1 className="no-restaurant-heading">No Restaurants Found</h1>
+      <p className="no-restaurant-desc">
+        Try different restaurant or search again
+      </p>
+    </div>
+  )
 
   getItems = () => {
     const {apiStatusItems} = this.state
@@ -236,7 +263,7 @@ class Home extends Component {
   }
 
   render() {
-    const {pageNo, searchValue, lastPage, filterValue} = this.state
+    const {searchValue, filterValue} = this.state
 
     return (
       <>
@@ -287,26 +314,6 @@ class Home extends Component {
             </div>
           </SortContainer>
           {this.getItems()}
-          <div className="next-previous-buttons-card">
-            <button
-              className="next-button"
-              type="button"
-              onClick={this.previousPage}
-            >
-              <GrPrevious />
-            </button>
-            <p className="page-number">
-              <span>{pageNo}</span> of {lastPage}
-            </p>
-
-            <button
-              className="next-button"
-              type="button"
-              onClick={this.nextPage}
-            >
-              <GrNext />
-            </button>
-          </div>
         </HomeContainer>
         <Footer />
       </>

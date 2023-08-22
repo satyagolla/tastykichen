@@ -21,6 +21,7 @@ class RestaurantDetails extends Component {
   state = {restaurantDetails: {}, apiStatus: apiStatusList.pending}
 
   componentDidMount() {
+    console.log('restaurant details')
     this.getRestaurantDetails()
   }
 

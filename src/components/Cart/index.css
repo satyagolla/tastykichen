@@ -47,7 +47,7 @@
 }
 .cart-line {
   border: none; /* Remove default border */
-  border-top: 1px dotted black; /* Add dotted border on top */
+  border-top: 3px dashed #97b9bf; /* Add dotted border on top */
   margin: 20px 0; /* Adjust spacing around the line */
 }
 .order-card {

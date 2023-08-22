@@ -8,18 +8,21 @@ const CartItem = props => {
 
   return (
     <li className="cart-item-container">
-      <img src={imageUrl} alt="foodItem" className="cart-image" />
+      <div>
+        <img src={imageUrl} alt="foodItem" className="cart-item-image" />
+      </div>
+
       <div className="cart-item-desc-card">
         <h1 className="cart-item-heading">{name}</h1>
-
         <div className="counter">
           <CartCount itemId={id} />
         </div>
-
-        <p className="cart-item-desc">
-          <BiRupee />
-          {cost}
-        </p>
+        <div>
+          <p className="cart-item-desc">
+            <BiRupee />
+            {cost}
+          </p>
+        </div>
       </div>
     </li>
   )

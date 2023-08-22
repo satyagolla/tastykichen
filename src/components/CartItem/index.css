@@ -3,13 +3,13 @@
   align-items: center;
   margin: 5px;
 }
-.cart-image {
-  width: 180px;
-  height: 130px;
+.cart-item-image {
+  width: 150px;
+  height: 120px;
   border-radius: 8px;
 }
 .cart-item-heading {
-  font-family: DM Sans;
+  font-family: 'DM Sans';
   font-size: 18px;
   font-weight: 500;
   line-height: 24px;
@@ -32,7 +32,7 @@
   .cart-item-desc-card {
     display: flex;
     justify-content: space-between;
-    width: 90%;
+    width: 100%;
   }
   .cart-item-container {
     margin-bottom: 20px;
@@ -41,6 +41,7 @@
     font-size: 18px;
   }
   .counter {
-    margin-right: 180px;
+    text-align: center;
+    margin-right: 140px;
   }
 }

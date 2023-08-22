@@ -41,8 +41,10 @@
   background-color: #e2e8f0;
   border: none;
   outline: none;
-  font-size: 24px;
+  font-size: 18px;
   padding-left: 15px;
+  height: 35px;
+  font-family: 'DM Sans';
 }
 .login-button {
   height: 40px;
