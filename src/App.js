@@ -6,7 +6,7 @@ import ProtectedRoute from './components/ProtectedRoute'
 import Login from './components/Login'
 import RestaurantDetails from './components/RestaurantDetails'
 import Home from './components/Home'
-import Cart from './components/Cart'
+import CartRoute from './components/CartRoute'
 import NotFound from './components/NotFound'
 import './App.css'
 
@@ -82,7 +82,7 @@ class App extends Component {
             path="/restaurant/:id"
             component={RestaurantDetails}
           />
-          <ProtectedRoute exact path="/cart" component={Cart} />
+          <ProtectedRoute exact path="/cart" component={CartRoute} />
           <Route exact path="/bad-path" component={NotFound} />
           <Redirect to="/bad-path" />
         </Switch>

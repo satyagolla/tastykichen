@@ -7,13 +7,6 @@ import {GrNext, GrPrevious} from 'react-icons/gr'
 import Cookies from 'js-cookie'
 
 import Footer from '../Footer'
-import {
-  Image,
-  SortContainer,
-  HomeContainer,
-  PopularHeading,
-  Text,
-} from './styledComponents'
 import Navbar from '../Navbar'
 import RestaurantItem from '../RestaurantItem'
 import './index.css'
@@ -72,7 +65,7 @@ class Home extends Component {
 
     const response = await fetch(url, options)
     const data = await response.json()
-
+    console.log(data)
     if (response.ok === true) {
       const totals = data.total
       const newList = data.restaurants.map(each => ({
@@ -162,13 +155,13 @@ class Home extends Component {
   }
 
   getLoader = () => (
-    <div className="loader-container">
+    <div className="loader-container" testid="restaurants-offers-loader">
       <Loader type="Oval" color="#fa9119" height={50} width={50} />
     </div>
   )
 
   getListLoader = () => (
-    <div className="loader-container">
+    <div className="loader-container" testid="restaurants-list-loader">
       <Loader type="Oval" color="#fa9119" height={50} width={50} />
     </div>
   )
@@ -189,7 +182,7 @@ class Home extends Component {
         <Slider {...settings}>
           {bannersList.map(each => (
             <div key={each.id}>
-              <Image src={each.imageUrl} alt="offer" />
+              <img className="banner-image" src={each.imageUrl} alt="offer" />
             </div>
           ))}
         </Slider>
@@ -212,14 +205,20 @@ class Home extends Component {
             className="next-button"
             type="button"
             onClick={this.previousPage}
+            testid="pagination-left-button"
           >
             <GrPrevious />
           </button>
           <p className="page-number">
-            <span>{pageNo}</span> of {lastPage}
+            <span testid="active-page-number">{pageNo}</span> of {lastPage}
           </p>
 
-          <button className="next-button" type="button" onClick={this.nextPage}>
+          <button
+            className="next-button"
+            type="button"
+            onClick={this.nextPage}
+            testid="pagination-right-button"
+          >
             <GrNext />
           </button>
         </div>
@@ -268,15 +267,15 @@ class Home extends Component {
     return (
       <>
         <Navbar />
-        <HomeContainer>
+        <div className="home-container">
           {this.getBanners()}
-          <SortContainer>
+          <div className="sort-container">
             <div>
-              <PopularHeading>Popular Restaurants</PopularHeading>
-              <Text>
+              <h1 className="popular-heading">Popular Restaurants</h1>
+              <p className="text">
                 Select Your favourite restaurant special dish and make your day
                 happy...
-              </Text>
+              </p>
               <div className="search-and-select-container">
                 <div className="search-card">
                   <input
@@ -293,9 +292,7 @@ class Home extends Component {
                 </div>
                 <div className="select-card">
                   <MdSort className="filter-icon" />
-                  <label htmlFor="select" className="filter-label">
-                    Sorted By
-                  </label>
+                  <p className="filter-label">Sort By</p>
                   <select
                     id="select"
                     className="select"
@@ -312,9 +309,9 @@ class Home extends Component {
               </div>
               <hr />
             </div>
-          </SortContainer>
+          </div>
           {this.getItems()}
-        </HomeContainer>
+        </div>
         <Footer />
       </>
     )

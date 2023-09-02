@@ -4,16 +4,6 @@ import {MdCancel} from 'react-icons/md'
 import {Link, withRouter} from 'react-router-dom'
 import Cookies from 'js-cookie'
 
-import {
-  WebsiteLogoCart,
-  Logo,
-  Title,
-  Menu,
-  MenuCard,
-  ListItemCard,
-  LogOut,
-  Cancel,
-} from './styledComponent'
 import './index.css'
 
 class Navbar extends Component {
@@ -47,23 +37,24 @@ class Navbar extends Component {
       <>
         <nav className="header-container-for-small-device">
           <Link to="/" className="link">
-            <WebsiteLogoCart>
-              <Logo
+            <div className="website-logo-card">
+              <img
+                className="logo"
                 src="https://ik.imagekit.io/k57gckxqm/Tasty%20Kitchen%20Project/Frame%20274.png?updatedAt=1692162574618"
                 alt="website logo"
               />
-              <Title>Tasty Kitchen</Title>
-            </WebsiteLogoCart>
+              <p className="title">Tasty Kitchen</p>
+            </div>
           </Link>
 
-          <Menu type="button" onClick={this.showMenu}>
+          <button className="menu" type="button" onClick={this.showMenu}>
             <CgMenu />
-          </Menu>
+          </button>
         </nav>
         {isTrue ? (
           <div className="menu-card-small-device">
-            <MenuCard>
-              <ListItemCard>
+            <div className="menu-items">
+              <ul className="list-card-items">
                 <Link to="/" className="link">
                   <li className={`li-element ${home}`}>Home</li>
                 </Link>
@@ -71,13 +62,23 @@ class Navbar extends Component {
                   <li className={`li-element ${cart}`}>Cart</li>
                 </Link>
                 <li className="li-element">
-                  <LogOut onClick={this.logout}>Logout</LogOut>
+                  <button
+                    className="logout-button"
+                    type="button"
+                    onClick={this.logout}
+                  >
+                    Logout
+                  </button>
                 </li>
-              </ListItemCard>
-              <Cancel onClick={this.hideMenu}>
+              </ul>
+              <button
+                className="cancel-button"
+                type="button"
+                onClick={this.hideMenu}
+              >
                 <MdCancel />
-              </Cancel>
-            </MenuCard>
+              </button>
+            </div>
           </div>
         ) : (
           ''
@@ -85,16 +86,17 @@ class Navbar extends Component {
         <nav>
           <div className="header-container-for-large-device">
             <Link to="/" className="link">
-              <WebsiteLogoCart>
-                <Logo
+              <div className="website-logo-card">
+                <img
+                  className="logo"
                   src="https://ik.imagekit.io/k57gckxqm/Tasty%20Kitchen%20Project/Frame%20274.png?updatedAt=1692162574618"
                   alt="website logo"
                 />
-                <Title>Tasty Kitchen</Title>
-              </WebsiteLogoCart>
+                <p className="title">Tasty Kitchen</p>
+              </div>
             </Link>
-            <MenuCard>
-              <ListItemCard>
+            <div className="list-card-items">
+              <ul className="list-card-items">
                 <Link to="/" className="link">
                   <li className={`li-element ${home}`}>Home</li>
                 </Link>
@@ -102,10 +104,16 @@ class Navbar extends Component {
                   <li className={`li-element ${cart}`}>Cart</li>
                 </Link>
                 <li className="li-element">
-                  <LogOut onClick={this.logout}>Logout</LogOut>
+                  <button
+                    className="logout-button"
+                    type="button"
+                    onClick={this.logout}
+                  >
+                    Logout
+                  </button>
                 </li>
-              </ListItemCard>
-            </MenuCard>
+              </ul>
+            </div>
           </div>
         </nav>
       </>

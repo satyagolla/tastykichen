@@ -7,9 +7,9 @@ const CartItem = props => {
   const {imageUrl, id, name, cost} = item
 
   return (
-    <li className="cart-item-container">
+    <li testid="cartItem" className="cart-item-container">
       <div>
-        <img src={imageUrl} alt="foodItem" className="cart-item-image" />
+        <img src={imageUrl} alt="food item" className="cart-item-image" />
       </div>
 
       <div className="cart-item-desc-card">

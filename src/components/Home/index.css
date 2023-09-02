@@ -82,11 +82,39 @@
   list-style-type: none;
   padding-left: 0px;
 }
+.popular-heading {
+  font-family: 'DM sans';
+  color: #183b56;
+  font-weight: 500;
+  margin-bottom: 0px;
+}
+
+.banner-image {
+  width: 100%;
+}
+.text {
+  font-family: 'DM sans';
+  color: #64748b;
+  font-weight: 500;
+}
+.sort-container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
 @media screen and (min-width: 786px) {
   .restaurants-container {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+  }
+  .banner-image {
+    height: 350px;
+  }
+  .home-container {
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 50px;
   }
 }
 .no-items-found-card {

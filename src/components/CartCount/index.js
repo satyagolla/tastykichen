@@ -27,16 +27,18 @@ class Counter extends Component {
                 type="button"
                 className="counter-button"
                 onClick={onDecrement}
+                testid="decrement-quantity"
               >
                 -
               </button>
               <div>
-                <p>{items}</p>
+                <p testid="item-quantity">{items}</p>
               </div>
               <button
                 type="button"
                 className="counter-button"
                 onClick={onIncrement}
+                testid="increment-quantity"
               >
                 +
               </button>

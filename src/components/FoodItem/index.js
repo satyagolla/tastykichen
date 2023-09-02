@@ -18,11 +18,11 @@ const FoodItem = props => {
         const isTrue = cartData.some(each => each.id === id)
 
         const addToList = () => {
-          addToCartList({...item, quantity: 1})
+          addToCartList({id, cost, name, imageUrl, quantity: 1})
         }
 
         return (
-          <li className="food-list-item">
+          <li className="food-list-item" testid="foodItem">
             <img src={imageUrl} alt="foodItem" className="image-item" />
             <div className="food-desc-card">
               <h1 className="item-name">{name}</h1>

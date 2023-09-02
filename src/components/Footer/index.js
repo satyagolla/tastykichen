@@ -6,7 +6,6 @@ import {
 } from 'react-icons/fa'
 
 import './index.css'
-import {Anchor} from './styledComponents'
 
 export default function Footer() {
   return (
@@ -23,18 +22,42 @@ export default function Footer() {
         The only thing we are serious about is food. Contact us on
       </p>
       <div className="logo-container">
-        <Anchor href="https://in.pinterest.com/" target="_blank">
+        <a
+          className="anchor-link"
+          href="https://in.pinterest.com/"
+          target="_blank"
+          rel="noreferrer"
+          testid="pintrest-social-icon"
+        >
           <FaPinterestSquare className="logo-icon" />
-        </Anchor>
-        <Anchor href="https://www.instagram.com/" target="_blank">
+        </a>
+        <a
+          className="anchor-link"
+          href="https://www.instagram.com/"
+          target="_blank"
+          rel="noreferrer"
+          testid="instagram-social-icon"
+        >
           <FaInstagram className="logo-icon" />
-        </Anchor>
-        <Anchor href="https://twitter.com/" target="_blank">
+        </a>
+        <a
+          className="anchor-link"
+          href="https://twitter.com/"
+          target="_blank"
+          rel="noreferrer"
+          testid="twitter-social-icon"
+        >
           <FaTwitter className="logo-icon" />
-        </Anchor>
-        <Anchor href="https://www.facebook.com/" target="_blank">
+        </a>
+        <a
+          className="anchor-link"
+          href="https://www.facebook.com/"
+          target="_blank"
+          rel="noreferrer"
+          testid="facebook-social-icon"
+        >
           <FaFacebookSquare className="logo-icon" />
-        </Anchor>
+        </a>
       </div>
     </div>
   )

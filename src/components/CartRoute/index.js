@@ -1,4 +1,4 @@
-import {withRouter} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import {Component} from 'react'
 
 import {BiRupee} from 'react-icons/bi'
@@ -8,13 +8,8 @@ import './index.css'
 import Navbar from '../Navbar'
 import Footer from '../Footer'
 
-class CartList extends Component {
+class CartRoute extends Component {
   state = {orderPlaced: false}
-
-  orderNow = () => {
-    const {history} = this.props
-    history.replace('/')
-  }
 
   noOrdersView = () => (
     <div className="no-orders-container">
@@ -23,17 +18,15 @@ class CartList extends Component {
         src="https://ik.imagekit.io/k57gckxqm/Tasty%20Kitchen%20Project/cooking%201.png?updatedAt=1692162574636"
         alt="empty cart"
       />
-      <h1 className="no-orders-heading">No Orders Yet!</h1>
+      <h1 className="no-orders-heading">No Order Yet!</h1>
       <p className="no-orders-desc">
         Your cart is empty. Add something from the menu.
       </p>
-      <button
-        type="button"
-        className="order-now-button"
-        onClick={this.orderNow}
-      >
-        Order Now
-      </button>
+      <Link to="/" className="link">
+        <button type="button" className="order-now-button">
+          Order Now
+        </button>
+      </Link>
     </div>
   )
 
@@ -69,7 +62,7 @@ class CartList extends Component {
                 <p className="order">Order:</p>
                 <p className="order">
                   <BiRupee />
-                  <span>{totalBill}</span>
+                  <span testid="total-price">{totalBill}</span>
                 </p>
               </div>
               <button
@@ -135,4 +128,4 @@ class CartList extends Component {
     return <>{orderPlaced ? this.placeOrder() : this.cartView()}</>
   }
 }
-export default withRouter(CartList)
+export default CartRoute

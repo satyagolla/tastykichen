@@ -62,11 +62,11 @@ class LoginRoute extends Component {
                 alt="website logo"
                 className="website-logo"
               />
-              <p className="tasty-kitchen">Tasty Kitchen</p>
-              <h1 className="login-heading">Login</h1>
+              <h1 className="tasty-kitchen">Tasty Kitchens</h1>
+              <h1 className="main-heading">Login</h1>
             </div>
             <div className="small-device-heading-image-card">
-              <h1 className="login-heading">Login</h1>
+              <h1 className="main-heading">Login</h1>
               <img
                 src="https://ik.imagekit.io/k57gckxqm/Tasty%20Kitchen%20Project/Rectangle%201457.png?updatedAt=1692167752080"
                 alt="website login"
