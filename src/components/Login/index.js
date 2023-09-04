@@ -63,13 +63,13 @@ class LoginRoute extends Component {
                 className="website-logo"
               />
               <h1 className="tasty-kitchen">Tasty Kitchens</h1>
-              <h1 className="main-heading">Login</h1>
             </div>
-            <div className="small-device-heading-image-card">
-              <h1 className="main-heading">Login</h1>
+            <div className="login-title-card">
+              <h1 className="login-heading">Login</h1>
               <img
                 src="https://ik.imagekit.io/k57gckxqm/Tasty%20Kitchen%20Project/Rectangle%201457.png?updatedAt=1692167752080"
                 alt="website login"
+                className="small-image"
               />
             </div>
             <form
@@ -112,7 +112,7 @@ class LoginRoute extends Component {
         <img
           src="https://ik.imagekit.io/k57gckxqm/Tasty%20Kitchen%20Project/Rectangle%201456.png?updatedAt=1692162576781"
           className="large-image"
-          alt="website login"
+          alt="website"
         />
       </div>
     )

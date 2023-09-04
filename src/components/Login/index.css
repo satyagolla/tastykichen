@@ -1,9 +1,8 @@
-.small-device-heading-image-card {
+.login-title-card {
   display: flex;
   justify-content: space-between;
-  width: 100%;
 }
-.main-heading {
+.login-heading {
   align-self: flex-end;
   padding-left: 20px;
   font-family: DM Sans;
@@ -22,7 +21,7 @@
 .form-card {
   padding-left: 20px;
   padding-right: 20px;
-  margin-top: 50px;
+  margin-top: 30px;
   width: 100%;
 }
 .label {
@@ -68,7 +67,7 @@
   display: none;
 }
 @media screen and (min-width: 786px) {
-  .small-device-heading-image-card {
+  .small-image {
     display: none;
   }
   .large-device-heading-image-card {
@@ -93,6 +92,8 @@
     width: 40%;
   }
   .login-form-card {
+    width: 350px;
+    height: 450px;
     padding: 20px;
     box-shadow: 1px 1px 5px -1px;
     border-radius: 4px;
@@ -107,7 +108,12 @@
     padding-top: 0px;
     margin-top: 0px;
   }
-  .main-heading {
-    align-self: center;
+  .small-image {
+    display: none;
+  }
+  .login-title-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }

@@ -7,7 +7,7 @@ const CartItem = props => {
   const {imageUrl, id, name, cost} = item
 
   return (
-    <li testid="cartItem" className="cart-item-container">
+    <li className="cart-item-container" testid="cartItem">
       <div>
         <img src={imageUrl} alt="food item" className="cart-item-image" />
       </div>
